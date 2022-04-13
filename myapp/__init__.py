@@ -44,11 +44,15 @@ login_manager.login_view = 'users.login'
 from myapp.core.views import core 
 app.register_blueprint(core)
 
-#linking the 404 and 403 error pages into the app 
+# Linking the 404 and 403 error pages into the app 
 from myapp.error_pages.handlers import error_pages
 app.register_blueprint(error_pages)
 
 
-#linking users views Blueprint
+# Linking users views Blueprint
 from myapp.users.views import users
 app.register_blueprint(users)
+
+# Linking and registering song_posts views Blueprint
+from myapp.song_posts.views import song_posts
+app.register_blueprint(song_posts)
