@@ -19,3 +19,8 @@ def create_post():
     print('Song Post was Created')
     return redirect(url_for('core.index'))
   return render_template('create_post.html', form=form)
+
+@song_posts.route('/<int: song_post_id>')
+def song_post(song_post_id):
+  song_post = FavSongs.query.get_or_404(song_post_id)
+  return render_template('song_post.html', title=song_post.title, date=song_post.date, post=song_post)
