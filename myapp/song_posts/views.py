@@ -12,7 +12,7 @@ song_posts = Blueprint('song_posts', __name__)
 def create_post():
   form = FavSongsForm()
   if form.validate_on_submit():
-    song_post = FavSongs(title=form.title.data, text=form.text.data, user_id=current_user.id)
+    song_post = FavSongs(title=form.title.data, musician=form.musician.data, genre=form.genre.data, releaseyear=form.releaseyear.data, text=form.text.data, user_id=current_user.id)
     db.session.add(song_post)
     db.session.commit()
     flash('Song Post Created')
@@ -39,6 +39,9 @@ def update(song_post_id):
 
     if form.validate_on_submit():
         song_post.title = form.title.data
+        song_post.musician = form.musician.data
+        song_post.genre = form.genre.data
+        song_post.releaseyear = form.releaseyear.data
         song_post.text = form.text.data
         db.session.commit()
         flash('Song Post Updated')
@@ -46,6 +49,9 @@ def update(song_post_id):
 
     elif request.method == 'GET':
         form.title.data = song_post.title
+        form.musician.data = song_post.musician
+        form.genre.data = song_post.genre
+        form.releaseyear.data = song_post.releaseyear
         form.text.data = song_post.text
 
     return render_template('create_post.html',title='Updating',form=form)
