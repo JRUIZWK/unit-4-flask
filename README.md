@@ -1,6 +1,7 @@
 # What Song?
 
-**WELCOME TO MY APPLICATION, WHAT SONG?.**
+**WELCOME TO MY APPLICATION, WHAT SONG?.** Are you tired of listening to the same old music? Do you want to experiment with other genres and musicians? Look no further, What Song? is an application were you can find songs and albums recommendations posted by users all over the world. **Expand your music taste with, What Song?**
+
 
 # Getting Started
 
@@ -37,3 +38,4 @@
 
 - [ ] The ability for users to pin favorite songs.
 - [ ] The ability for users to create playlists. 
+- [ ] Add Light/Dark Mode.
