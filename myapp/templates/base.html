@@ -8,32 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" size=32x32 href="{{ url_for('static', filename='images/Favicon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <title>What Song?</title>
 </head>
 <body>
     <ul class="nav">
-        <li class="nav-link">
+        <li class="nav-link" class="nav-left">
             <a href="{{url_for('core.index')}}">Home</a>
         </li>
-        <li class="nav-link">
+        <!-- <li class="nav-link">
             <a href="{{url_for('core.info')}}">About</a>
-        </li>
+        </li> -->
 
         {% if current_user.is_authenticated %}
-        <li class="nav-link">
-            <a href="{{url_for('song_posts.create_post')}}">Create Post</a> 
+        <li class="nav-link" class="nav-left">
+            <a href="{{url_for('song_posts.create_post')}}">Add Recommendation</a> 
         </li>
-        <li class="nav-link">
-            <a href="{{url_for('users.logout')}}">Log Out</a>
-        </li>
-        <li class="nav-link">
+        <li class="nav-link" class="nav-right">
             <a href="{{url_for('users.account')}}">Account</a>
         </li>
+        <li class="nav-link" class="nav-right">
+            <a href="{{url_for('users.logout')}}">Log Out</a>
+        </li>
         {% else %}
-        <li class="nav-link">
+        <li class="nav-link" class="nav-right">
             <a href="{{url_for('users.login')}}">Log In</a>
         </li>
-        <li class="nav-link">
+        <li class="nav-link" class="nav-right">
             <a href="{{url_for('users.register')}}">Register</a>
         </li>
         {% endif %}

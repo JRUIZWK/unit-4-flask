@@ -9,6 +9,6 @@ class FavSongsForm(FlaskForm):
   musician = StringField('Musician', validators=[DataRequired()])
   genre = StringField('Genre', validators=[DataRequired()])
   releaseyear = StringField('Release Year', validators=[DataRequired()])
-  text = TextAreaField('Text', validators=[DataRequired()])
+  text = TextAreaField('Comments', validators=[DataRequired()])
 
   submit = SubmitField('Post')
