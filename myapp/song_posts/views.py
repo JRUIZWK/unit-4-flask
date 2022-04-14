@@ -7,7 +7,7 @@ from myapp.song_posts.forms import FavSongsForm
 
 song_posts = Blueprint('song_posts', __name__)
 
-@song_posts.route('/create', method=['GET', 'POST'])
+@song_posts.route('/create', methods=['GET', 'POST'])
 @login_required
 def create_post():
   form = FavSongsForm()
@@ -21,7 +21,7 @@ def create_post():
   return render_template('create_post.html', form=form)
 
 
-@song_posts.route('/<int: song_post_id>')
+@song_posts.route('/<int:song_post_id>')
 def song_post(song_post_id):
   song_post = FavSongs.query.get_or_404(song_post_id)
   return render_template('song_post.html', title=song_post.title, date=song_post.date, post=song_post)
