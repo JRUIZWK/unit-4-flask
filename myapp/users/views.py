@@ -6,10 +6,9 @@ from myapp import db
 from myapp.models import User, FavSongs
 from myapp.users.forms import RegistrationForm, LoginForm, UpdateUserForm
 
-users = Blueprint('users', __name__) # dont forget to register this in __init__.py 
+users = Blueprint('users', __name__)
 
 
-# register
 @users.route('/register', methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
@@ -23,7 +22,6 @@ def register():
     
     return render_template('register.html', form=form)
 
-# login
 @users.route('/login', methods=['GET', 'POST'])
 def login():
 
@@ -46,14 +44,11 @@ def login():
 
     return render_template('login.html',form=form)
 
-# logout
 @users.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('core.index')) #once the user has logged out we will redirect them back home
+    return redirect(url_for('core.index'))
 
-
-#account (update UserForm)
 @users.route('/account', methods=['GET', 'POST'])
 @login_required
 def account():

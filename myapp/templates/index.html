@@ -7,14 +7,9 @@
         {% for post in song_posts.items %}
             <div class="card">
                 <div class="car-boy">
-                    <!-- <h2>
-                        <a class="card-title" href="{{url_for('song_posts.song_post', song_post_id=post.id)}}">{{post.title}}</a>
-                        <a href="{{url_for('users.user_posts', username=post.author.username)}}">Written by: {{post.author.username}}</a>
-                    </h2> -->
                     <h4>{{ post.title }}</h4>
                     <h4>Musician: {{post.musician}}</h4>
                     <h4>Recommended by: {{post.author.username}}</h4>
-                    <!-- <p>Published on: {{post.date.strftime('%Y - %m - %d')}}</p> -->
                     <a class="btn btn-primary" href="{{url_for('song_posts.song_post', song_post_id=post.id)}}">Details</a>
                 </div>
             </div>

@@ -12,9 +12,6 @@ html {
 }
 
 /* resets font size to be 62.5% of the user preference - in most browser configurations this will be 10px */
-:root {
-  /* font-size: 62.5%; */
-}
 
 body {
   background-image: url("https://cdn.wallpapersafari.com/35/45/xaw07i.gif");
@@ -24,7 +21,6 @@ body {
   background-size: cover;
   /* Use a system font, if none are available use an available sans-sarif font */
   margin: 0;
-  /* font-size: 2.0rem; */
   color: lightgray;
   font-family: 'Bangers', cursive;
 }
