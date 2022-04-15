@@ -41,4 +41,3 @@
 
 - [ ] The ability for users to pin favorite songs.
 - [ ] The ability for users to create playlists. 
-- [ ] Add Light/Dark Mode.
