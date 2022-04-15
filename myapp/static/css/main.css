@@ -13,7 +13,7 @@ html {
 
 /* resets font size to be 62.5% of the user preference - in most browser configurations this will be 10px */
 :root {
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 
 body {
@@ -24,7 +24,7 @@ body {
   background-size: cover;
   /* Use a system font, if none are available use an available sans-sarif font */
   margin: 0;
-  font-size: 2.0rem;
+  /* font-size: 2.0rem; */
   color: lightgray;
   font-family: 'Bangers', cursive;
 }
@@ -36,9 +36,47 @@ body {
 a {
   color: lightgray;
   text-decoration: none;
-  font-size: 2.0rem;
+  font-size: 1.5rem;
 }
 
 a:hover {
-  color:  #9198e5;
+  color: #e752ff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  font-size: xx-large;
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  margin-top: 70px;
+}
+
+.index-header {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.jumbotron {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.btn {
+  background-color: transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+}
+
+.card {
+  background-color: black;
+  text-align: center;
+  margin-top: 10px;
+  outline-color: lightgray;
 }

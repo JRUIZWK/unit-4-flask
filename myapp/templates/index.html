@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="jumbotron">
-        <h1>Discover New Music</h1>
+        <h1 class="index-header">Discover New Music</h1>
     </div>
     <div class="container">
         {% for post in song_posts.items %}
@@ -13,9 +13,9 @@
                     </h2> -->
                     <h4>{{ post.title }}</h4>
                     <h4>Musician: {{post.musician}}</h4>
-                    <h4>Written by: {{post.author.username}}</h4>
+                    <h4>Recommended by: {{post.author.username}}</h4>
                     <!-- <p>Published on: {{post.date.strftime('%Y - %m - %d')}}</p> -->
-                    <a class="btn btn-primary" href="{{url_for('song_posts.song_post', song_post_id=post.id)}}">Read Song Post</a>
+                    <a class="btn btn-primary" href="{{url_for('song_posts.song_post', song_post_id=post.id)}}">Details</a>
                 </div>
             </div>
         {% endfor %}

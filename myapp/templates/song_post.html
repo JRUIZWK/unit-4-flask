@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="jumbotron">
-  <h1>{{ post.title }}</h1>
-  <h3>Musician: {{post.musician}}</h3>
-  <h3>Genre: {{post.genre}}</h3>
-  <h3>Release Year: {{post.releaseyear}}</h3>
-  <h2>Written by: {{post.author.username}}</h2>
-  <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
-  <p>{{post.text}}</p>
+  <h1>Details Page</h1>
+  <h2>Title: {{ post.title }}</h2>
+  <h2>Musician: {{post.musician}}</h2>
+  <h2>Genre: {{post.genre}}</h2>
+  <h2>Release Year: {{post.releaseyear}}</h2>
+  <h2>Comments: {{post.text}}</h2>
+  <h5>Recommended by: {{post.author.username}}</h5>
+  <h5>Published: {{ post.date.strftime('%B %d, %Y') }}</h5>
    {% if post.author == current_user %}
      <div>
        <a class="btn btn-secondary" href="{{ url_for('song_posts.update', song_post_id=post.id) }}">Update</a>
