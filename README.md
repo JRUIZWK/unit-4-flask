@@ -9,6 +9,9 @@
 
 # Screenshots
 
+<img src="./myapp/static/images/W1.png" alt="Wireframe">
+<img src="./myapp/static/images/W2.png" alt="Wireframe">
+<img src="./myapp/static/images/W3.png" alt="WireframeFinish">
 
 # Technologies Used
 
